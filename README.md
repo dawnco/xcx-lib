@@ -13,6 +13,7 @@ cd new_project_dir
 ##目录结构
 ```
 new_project_dir
+    - project.config.json  小程序开发工具的项目配置文件
     - root      小程序源代码目录
         - lib   库目录（由https://github.com/dawnco/xcx-lib.git维护）
         - etc   项目配置文件目录
