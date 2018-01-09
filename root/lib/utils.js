@@ -403,10 +403,81 @@ const range = function (min, max, step=1) {
     return res;
 };
 
+
+const searchInit = function (page, defkey, searchTap, placeholder) {
+    var self = this;
+    self.defkey = defkey || "";
+    self.page = page;
+    self.page.keyword = defkey || "";
+
+    if (typeof searchTap == 'function') {
+        self.page.searchTap = searchTap;
+    }else{
+        self.page.searchTap = function (e) {
+            var event = {
+                dataset:{
+                    url: config.search_path,
+                    defkey: encodeURIComponent(self.page.keyword)
+                }
+            };
+            navigateTo(event);
+        };
+    }
+
+    self.page.searchClean = function (e) {
+        self.page.keyword = "";
+        self.page.setData({"search.keyword":""});
+    };
+
+    self.page.searchInput = function (e) {
+        var value = e.detail.value;
+        switch (e.type) {
+            case 'focus':
+                if (value!="" && value == self.defkey) {
+                    self.page.keyword = "";
+                    self.page.setData({"search.keyword":""});
+                }
+                break;
+            case 'input':
+                self.page.keyword = value;
+                clearTimeout(timer['search']);
+                timer['search'] = setTimeout(function () {
+                    self.page.setData({"search.keyword":value});
+                }, 500);
+                break;
+            case 'blur':
+                self.page.keyword = value;
+                self.page.setData({"search.keyword":value});
+                break;
+            case 'confirm':
+                self.page.keyword = value;
+                if (value!="" && value == self.defkey) {
+                    self.page.setData({"search.keyword":self.defkey});
+                    return;
+                }
+                self.page.setData({"search.keyword":value});
+
+                self.page.searchTap();
+                break;
+        }
+    };
+
+    setTimeout(function () {
+        //异步渲染，提高性能
+        self.page.setData({
+            search: {
+                keyword    : self.defkey,
+                placeholder: placeholder || "关键词",
+            }
+        });
+    }, 100);
+};
+
 module.exports = {
     config         : config,
     arrayFilter    : arrayFilter,
     arrayColumn    : arrayColumn,
+    searchInit     : searchInit,
     getUserInfo    : getUserInfo,
     chooseAddress  : chooseAddress,
     shareApp       : shareApp,
@@ -424,6 +495,6 @@ module.exports = {
     viewPhoto      : viewPhoto,
     showTip        : showTip,
     inputBind      : inputBind,
-    range:          range,
+    range          : range,
     timer          : timer
 };
