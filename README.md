@@ -10,7 +10,7 @@ cd new_project_dir
 
 注意：project.config.json 小程序配置文件中 指明了 "miniprogramRoot" = "./root"
 
-##目录结构
+## 目录结构
 ```
 new_project_dir
     - project.config.json   小程序开发工具的项目配置文件
@@ -19,7 +19,8 @@ new_project_dir
         - etc               项目配置文件目录
 ```
 
-##开始开发
+
+## 开始开发
 小程序开发工具创建项目，目录选择 new_project_dir 目录就可以了
 
 将root/etc/config_default.js   改名为  config.js
@@ -28,7 +29,6 @@ new_project_dir
 
 ...
 
-
-##lib 第三方库说明
+## lib 第三方库说明
 wxParse 富文件解析，支持HTML MARKDOWN代码解析成小程序代码渲染：
 https://github.com/icindy/wxParse
