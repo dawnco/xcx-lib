@@ -1,5 +1,5 @@
 {
-	"miniprogramRoot": "./root",
+	"miniprogramRoot": "./src",
 	"setting": {
 		"postcss": true,
 		"es6": true,
@@ -9,5 +9,6 @@
 	},
 	"appid": "wx499be8478f6cd037",
 	"projectname": "%E4%BA%91%E5%8F%8A%E5%AE%A2%E5%95%86%E5%9F%8E%E6%BC%94%E7%A4%BA",
+	"libVersion": "1.7.0",
 	"condition": {}
 }
