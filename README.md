@@ -10,6 +10,13 @@ cd new_project_dir
 
 注意：project.config.json 小程序配置文件中 指明了 "miniprogramRoot" = "./root"
 
+## GIT 忽略已入库的文件的本址修改
+本地修改了非此库管理的公共文件（比如：project.config.json 等文件），注意不要不要提交到此库，请使用以下命令
+git update-index --assume-unchanged FILENAME
+
+取消这个忽略：
+git update-index --no-assume-unchanged FILENAME
+
 ## 目录结构
 ```
 new_project_dir
