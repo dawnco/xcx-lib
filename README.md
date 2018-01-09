@@ -29,5 +29,6 @@ new_project_dir
 ...
 
 
-
-lib  wxParse:  https://github.com/icindy/wxParse
+##lib 第三方库说明
+wxParse 富文件解析，支持HTML MARKDOWN代码解析成小程序代码渲染：
+https://github.com/icindy/wxParse
