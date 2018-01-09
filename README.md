@@ -32,9 +32,9 @@ new_project_dir
 ## 开始开发
 小程序开发工具创建项目，目录选择 new_project_dir 目录就可以了
 
-将root/etc/config_default.js   改名为  config.js
+将 src/etc/config_default.js   改名为  config.js
 
-然后在root目录创建 app.js、 app.json、 app.wxss等 小程序代码文件
+然后在 src 目录创建 app.js、 app.json、 app.wxss等 小程序代码文件
 
 ...
 
