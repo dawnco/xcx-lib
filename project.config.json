@@ -1,0 +1,9 @@
+{
+  "miniprogramRoot": "./root",
+  "setting": {
+    "postcss": true,
+    "es6": true,
+    "minified": true,
+    "urlCheck": false
+  }
+}
