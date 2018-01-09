@@ -1,4 +1,5 @@
 const config = require('../etc/config');
+import Queue from './Queue';
 
 const timer = {};
 
@@ -496,5 +497,6 @@ module.exports = {
     showTip        : showTip,
     inputBind      : inputBind,
     range          : range,
+    queue          : new Queue(),
     timer          : timer
 };
