@@ -8,6 +8,8 @@ git clone https://github.com/dawnco/xcx-lib.git new_project_dir
 
 cd new_project_dir
 
+git update-index --assume-unchanged project.config.json
+
 注意：project.config.json 小程序配置文件中 指明了 "miniprogramRoot" = "./root"
 
 ## GIT 忽略已入库的文件的本地修改
