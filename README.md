@@ -13,10 +13,10 @@ cd new_project_dir
 ##目录结构
 ```
 new_project_dir
-    - project.config.json  小程序开发工具的项目配置文件
-    - root      小程序源代码目录
-        - lib   库目录（由https://github.com/dawnco/xcx-lib.git维护）
-        - etc   项目配置文件目录
+    - project.config.json   小程序开发工具的项目配置文件
+    - root                  小程序源代码目录
+        - lib               库目录（由https://github.com/dawnco/xcx-lib.git维护）
+        - etc               项目配置文件目录
 ```
 
 ##开始开发
@@ -27,3 +27,7 @@ new_project_dir
 然后在root目录创建 app.js、 app.json、 app.wxss等 小程序代码文件
 
 ...
+
+
+
+lib  wxParse:  https://github.com/icindy/wxParse
