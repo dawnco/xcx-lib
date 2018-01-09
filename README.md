@@ -10,7 +10,7 @@ cd new_project_dir
 
 git update-index --assume-unchanged project.config.json
 
-注意：project.config.json 小程序配置文件中 指明了 "miniprogramRoot" = "./root"
+注意：project.config.json 小程序配置文件中 指明了 "miniprogramRoot" = "./src"
 
 ## GIT 忽略已入库的文件的本地修改
 本地修改了非此库管理的公共文件（比如：project.config.json 等文件），注意不要不要提交到此库，请使用以下命令
@@ -23,7 +23,7 @@ git update-index --no-assume-unchanged FILENAME
 ```
 new_project_dir
     - project.config.json   小程序开发工具的项目配置文件
-    - root                  小程序源代码目录
+    - src                   小程序源代码目录
         - lib               库目录（由https://github.com/dawnco/xcx-lib.git维护）
         - etc               项目配置文件目录
 ```

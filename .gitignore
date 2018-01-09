@@ -1,5 +1,5 @@
 .idea/
-/root/*
-!/root/lib/
-!/root/etc/
-/root/etc/config.js
+/src/*
+!/src/lib/
+!/src/etc/
+/src/etc/config.js
